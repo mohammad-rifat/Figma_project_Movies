@@ -1,0 +1,125 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+/*BANNER PART START*/
+#banner {
+  background: url("../images/Banner_BG.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .overlay {
+    background: linear-gradient(
+      82.06deg,
+      rgba(1, 1, 1, 0.62) 46.14%,
+      rgba(31, 169, 180, 0) 101.22%
+    );
+    box-shadow: inset 0px 115px 83px rgba(0, 0, 0, 0.7);
+    padding-top: 185px;
+
+    .banner_info {
+      h1 {
+        font-family: $Kaushan-font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 112%;
+        text-align: center;
+        letter-spacing: 0.15em;
+        color: $white;
+        span {
+          display: block;
+          font-size: 50px;
+        }
+      }
+      h4 {
+        font-family: $inter-font-family;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 112%;
+        letter-spacing: 0.15em;
+        color: $white;
+        padding-top: 11px;
+        padding-bottom: 8px;
+      }
+      p {
+        @include paragraph($white, $inter-font-family);
+        padding-bottom: 34px;
+      }
+      .banner_btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding-bottom: 65px;
+        a {
+          @include common_button;
+          margin-right: 40px;
+          display: inline-flex;
+          gap: 5px;
+          span.info {
+            height: 30px;
+            width: 30px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all linear 0.3s;
+          }
+          &:hover {
+            span.info {
+              border: 2px solid $btn_hover_color;
+            }
+          }
+        }
+      }
+    }
+    .movie_slider {
+      .slide_item {
+        margin: 0 12px;
+        .image {
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .movie_overlay {
+            background: rgba(22, 39, 65, 0.78);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            a {
+              width: 90px;
+              height: 90px;
+              border: 1px solid $white;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 30px;
+              color: $white;
+            }
+          }
+        }
+      }
+      //Active style
+      .slide_item.slick-center {
+        .image {
+          .movie_overlay {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+/*BANNER PART END*/
