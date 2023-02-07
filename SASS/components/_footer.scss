@@ -1,7 +1,27 @@
-footer{
-    background-color: #222;
-    padding: 80px 0px;
-    p{
-        color: #fff;
+@import '../variable/variable';
+footer {
+    background: $footer_bg_color;
+  .container {
+    .row {
+        padding: 30px 0px;
+      .col-lg-12 {
+        display: flex;
+        justify-content: center;
+        p {
+          font-family: $jura_font_family;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: $white;
+          a {
+            color: $footer_link_color;
+            &:hover{
+                opacity: 0.6;
+            }
+          }
+        }
+      }
     }
+  }
 }

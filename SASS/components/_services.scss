@@ -1,0 +1,72 @@
+@import "../variable/variable";
+/*SERVICES START*/
+#services {
+  background: $service_bg_color;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  .container {
+    .row {
+      .col-lg-6 {
+        .service_info {
+          color: $white;
+          h1 {
+            font-family: $inter-font-family;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 112%;
+            letter-spacing: 0.15em;
+            color: $white;
+          }
+          p {
+            font-family: $poppins-font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.15em;
+            color: $white;
+            padding-top: 30px;
+            padding-bottom: 15px;
+          }
+          a {
+            background-color: $btn_primary_bg_color;
+            color: $white;
+            padding: 16px 20px;
+            border-radius: 5px;
+            font-family: $inter-font-family;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 29px;
+            line-height: 112%;
+            text-align: center;
+            letter-spacing: 0.15em;
+            transition: all linear 0.3s;
+            &:hover {
+              background-color: $white;
+              color: $btn_hover_color;
+            }
+          }
+        }
+        .service_image {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          picture {
+            width: 504px;
+            height: 367px;
+            border-radius: 15px;
+            position: relative;
+            top: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*SERVICES END*/
